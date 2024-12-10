@@ -204,22 +204,6 @@ export class GameEnv {
         sound.play();
     }
 
-    // Play a sound by its ID in a loop
-    static loopSound(id) {
-        const sound = document.getElementById(id);
-        sound.loop = true;
-        sound.play();
-    }
-
-    // Stop all sounds
-    static stopAllSounds() {
-        const sounds = document.getElementsByTagName('audio');
-        for (let sound of sounds) {
-            sound.pause();
-            sound.currentTime = 0;
-        }
-    }
-
     static updateParallaxDirection(key) {
         switch (key) {
             case "a":
