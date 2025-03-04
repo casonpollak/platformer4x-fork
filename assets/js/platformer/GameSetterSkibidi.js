@@ -180,12 +180,12 @@ const assets = {
       },
       escaper: {
         src: "/images/platformer/sprites/skibidiMan.png",
-        width: 54,   
-        height: 60,
+        width: 53,   
+        height: 61,
         scaleSize: 110,   
         speedRatio: 0.9,
         animationSpeed: 5.5, // How fast it goes through displaying each frame in specified row below:
-        idle: {row: 0, frames: 4 }, // idle animation
+        idle: {row: 3, frames: 4 }, // idle animation
         walk: {  row: 1, frames: 6 }, // walking animation
         run: {  row: 2, frames: 6},  // running animation
         jump: {row: 4, frames: 6 }, // jumping animation
@@ -509,7 +509,9 @@ const assets = {
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.sand, xPercentage: 0.6, yPercentage: 0.71 } ,
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.sand, xPercentage: 0.14, yPercentage: 0.84 },
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.sand, xPercentage: 0.7, yPercentage: 0.84 },
-    { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.sand, xPercentage: 0.3, yPercentage: 0.4 },
+    { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.sand, xPercentage: 0.4, yPercentage: 0.4 },
+    { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.sand, xPercentage: 0.36, yPercentage: 0.4 },
+    { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.sand, xPercentage: 0.38, yPercentage: 0.4 },
     ///{ name: 'coin', id: 'coin', class: Coin, data: assets.obstacles.vbucks, xPercentage: 0.475, yPercentage: 0.5 },
    // { name: 'itemBlock2', id: 'jumpPlatform', class: JumpPlatform2, data: assets.platforms.itemBlock2, xPercentage: 0.56, yPercentage: 0.8 }, //item block is a platform
     //{ name: 'itemBlock2', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.itemBlock2, xPercentage: 0.56, yPercentage: 0.8 }, //item block is a platform

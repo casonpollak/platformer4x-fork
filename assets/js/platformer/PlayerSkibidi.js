@@ -127,15 +127,27 @@ export class PlayerSkibidi extends PlayerBaseOneD {
                 GameEnv.playerAttack = false;
                 break;
             case 'b':
-                this.state.animation = 'attack';  // Always trigger attack when b is pressed
-                GameEnv.playerAttack = true;
-                break;
-            default:
-                this.state.animation = 'idle';
-                GameEnv.playerAttack = false;
-                break;
-        }
+                // Trigger attack once per key press, no holding allowed
+            if (!this.state.isAttacking) {  // Check if player isn't already attacking
+                this.state.animation = 'attack';  // Set the animation to attack
+                GameEnv.playerAttack = true;     // Set player attack state to true
+                this.state.isAttacking = true;   // Set the player as attacking
+
+                // Reset the attack state after the animation ends (set it to 500ms for now)
+                setTimeout(() => {
+                    this.state.isAttacking = false;
+                    GameEnv.playerAttack = false;
+                }, 500); // 500ms delay for one attack per key tap (adjust timing based on animation)
+            }
+            break;
+        default:
+            this.state.animation = 'idle';
+            GameEnv.playerAttack = false;
+            break;
+            }
     }
+
+    
 
     /**
      * @override

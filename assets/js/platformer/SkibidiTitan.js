@@ -46,7 +46,7 @@ export class skibidiTitan extends Character {
 
     hpLoss() {
         if (GameEnv.playerAttack && !this.state.isDead) {
-            this.currentHp -= 1;
+            this.currentHp -= 2.5;
         }
     }
 

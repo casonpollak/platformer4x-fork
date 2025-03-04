@@ -105,10 +105,11 @@ export class PlayerGreece extends PlayerBase {
                 }
                 break;
             case "flyingIsland":
-                if(this.collisionData.touchPoints.this.top && GameEnv.hasFlag.length === 1){
+                //When the flying island is touched whilst the player has the flag, it transitions to the next level
+                if(this.collisionData.touchPoints.this.top && GameEnv.hasFlag.length == 1){
                     const index = GameEnv.levels.findIndex(level => level.tag === "Quidditch");
                     GameControl.transitionToLevel(GameEnv.levels[index]);
-                    break
+                    break;
                 }
             //     console.log("finish line checks")
             //     console.log(GameEnv.gameObjects)
